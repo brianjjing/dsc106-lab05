@@ -30,8 +30,11 @@ let data = [
     { value: 5, label: 'cherries' },
   ];
 let sliceGenerator = d3.pie().value((d) => d.value);
+
 let arcData = sliceGenerator(data);
+let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let arcs = arcData.map((d) => arcGenerator(d));
+
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
 // Adding the pie chart segments:
@@ -39,7 +42,7 @@ arcs.forEach((arc, idx) => {
     d3.select('svg')
       .append('path')
       .attr('d', arc)
-      .attr(colors(idx))
+      .attr('fill', colors(idx))
 })
 
 // Creating all the <li></li> tags:
