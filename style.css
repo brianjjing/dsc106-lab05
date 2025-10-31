@@ -113,6 +113,16 @@ nav a:hover {
   overflow: visible;
 }
 
+.swatch {
+  display: inline-block;
+  width: 1em;            /* width of the color box */
+  aspect-ratio: 1 / 1;   /* ensures it's a perfect square */
+  background-color: var(--color-accent);
+  border-radius: 0.25em; /* slight rounding; use 50% for a circle */
+  margin-right: 0.5em;   /* space between the swatch and the text */
+  vertical-align: middle;
+}
+
 /* Color Scheme: */
 
 .color-scheme {
