@@ -100,6 +100,19 @@ nav a:hover {
   gap: 1em;
 }
 
+.projects-year-text {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, serif; 
+  font-variant-numeric: oldstyle-nums;
+  line-height: 1.5; 
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
 /* Color Scheme: */
 
 .color-scheme {

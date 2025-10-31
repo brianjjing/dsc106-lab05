@@ -124,7 +124,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
             }
             <p>${project.description ?? "No description provided."}</p>
             <p></p>
-            <p>${project.year.italics() ?? "No year provided.".italics()}</p>
+            <p class="projects-year-text">${project.year.italics() ?? "No year provided.".italics()}</p>
         `;
 
         containerElement.appendChild(article);
