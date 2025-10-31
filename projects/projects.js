@@ -27,7 +27,7 @@ let data = [
     { value: 3, label: 'mangos' },
     { value: 4, label: 'pears' },
     { value: 5, label: 'limes' },
-    { value: 5, label: 'cherries' },
+    { value: 6, label: 'cherries' },
   ];
 let sliceGenerator = d3.pie().value((d) => d.value);
 
