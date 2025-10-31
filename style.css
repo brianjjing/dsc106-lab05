@@ -124,8 +124,8 @@ nav a:hover {
 }
 
 .legend {
-  display: grid;
   flex: 1;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 0.5em;
   list-style: none;
@@ -156,8 +156,19 @@ nav a:hover {
   border: 1px solid currentColor;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-/* Profile Stats */
+
 /* Profile stats */
 #profile-stats {
   margin-top: 2rem;
