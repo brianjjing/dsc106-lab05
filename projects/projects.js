@@ -55,3 +55,19 @@ data.forEach((d, idx) => {
     .attr('style', `--color:${colors(idx)}`)
     .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
 });
+
+let query = ''; 
+// “Find the first element on the page that has the class searchBar.”
+
+let searchInput = document.querySelector('.searchBar');
+
+searchInput.addEventListener('change', (event) => {
+  query = event.target.value;
+  
+  // TODO: Filtering and returning:
+  let filteredProjects = projects.filter((project) => {
+    let values = Object.values(project).join('\n').toLowerCase();
+    return values.includes(query.toLowerCase());
+  });
+  renderProjects(filteredProjects, projectsContainer, 'h2');
+});
