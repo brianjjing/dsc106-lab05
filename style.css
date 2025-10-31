@@ -140,6 +140,18 @@ nav a:hover {
   font-size: 0.9em;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 /* Color Scheme: */
 
 .color-scheme {
@@ -154,18 +166,6 @@ nav a:hover {
   background: transparent;
   color: inherit;
   border: 1px solid currentColor;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 
