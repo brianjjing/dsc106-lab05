@@ -6,8 +6,30 @@ const projects = await fetchJSON('../lib/projects.json');
 // Select container for where to render the project articles:
 const projectsContainer = document.querySelector('.projects');
 
+// function renderPieChart(projectsGiven) {
+//     // re-calculate rolled data
+//     let newRolledData = d3.rollups(
+//       projectsGiven,
+//       (v) => v.length,
+//       (d) => d.year,
+//     );
+//     // re-calculate data
+//     let newData = newRolledData.map(([year, count]) => {
+//       return { ... }; // TODO
+//     });
+//     // re-calculate slice generator, arc data, arc, etc.
+//     let newSliceGenerator = ...;
+//     let newArcData = newSliceGenerator(...);
+//     let newArcs = newArcData.map(...);
+//     // TODO: clear up paths and legends
+//     ...
+//     // update paths and legends, refer to steps 1.4 and 2.2
+//     ...
+//   }
+
 // Render each project w h2:
 renderProjects(projects, projectsContainer, 'h2'); 
+// renderPieChart(projects);
 
 // Selecting title element
 const titleElement = document.querySelector('.projects-title');
@@ -18,7 +40,6 @@ if (titleElement) {
 
 
 // D3 Stuff:
-
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 let rolledData = d3.rollups(
@@ -57,11 +78,9 @@ data.forEach((d, idx) => {
 });
 
 let query = ''; 
-// “Find the first element on the page that has the class searchBar.”
+let searchInput = document.querySelector('.searchBar'); //Searches for a searchBar-labeled element.
 
-let searchInput = document.querySelector('.searchBar');
-
-searchInput.addEventListener('change', (event) => {
+searchInput.addEventListener('input', (event) => {
   query = event.target.value;
   
   // TODO: Filtering and returning:
@@ -70,4 +89,5 @@ searchInput.addEventListener('change', (event) => {
     return values.includes(query.toLowerCase());
   });
   renderProjects(filteredProjects, projectsContainer, 'h2');
+  //renderPieChart(filteredProjects);
 });
