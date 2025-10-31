@@ -31,7 +31,7 @@ document.body.prepend(nav); //Puts the new nav element at the start of <body>
 //Ensuring internal links both when run locally, and when deployed:
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
     ? "/"                  // Local server
-    : "/dsc106-lab04/";         // GitHub Pages repo name
+    : "/dsc106-lab05/";         // GitHub Pages repo name
 
 
 for (let p of pages) { //Adding a elements in the nav for each page
@@ -123,6 +123,8 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
                 : `<div class="placeholder">No image available</div>`
             }
             <p>${project.description ?? "No description provided."}</p>
+            <p></p>
+            <p>${project.year.italics() ?? "No year provided.".italics()}</p>
         `;
 
         containerElement.appendChild(article);
