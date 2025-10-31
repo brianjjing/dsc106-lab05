@@ -123,6 +123,22 @@ nav a:hover {
   vertical-align: middle;
 }
 
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.5em;
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: 0.9em;
+}
+
 /* Color Scheme: */
 
 .color-scheme {
